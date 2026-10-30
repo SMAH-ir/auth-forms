@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <script>
+          if (localStorage.getItem('isAuth') !== 'true') location.replace('../login/login.html');
+     </script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Dashboard</title>
+     <meta name="robots" content="noindex">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+     <main class="auth auth--dashboard">
+          <header class="auth__header">
+               <h1 class="auth__title">Welcome, <span id="userNameDisplay">User</span>!</h1>
+          </header>
+          <div class="auth__content">
+               <p class="auth__text">This is a protected page. Only authenticated users can see this content.</p>
+               <button id="logoutBtn" class="auth__submit-btn auth__submit-btn--outline">Log out</button>
+          </div>
+     </main>
+
+     <script src="dashboard.js"></script>
+</body>
+
+</html>
